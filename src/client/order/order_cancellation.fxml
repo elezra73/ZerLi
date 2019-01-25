@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="574.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.order.OrderCancellationController">
+   <children>
+      <Label layoutX="27.0" layoutY="62.0" text="Select order to cancel:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button id="btn" fx:id="mCancelButton" layoutX="272.0" layoutY="519.0" mnemonicParsing="false" onAction="#onCancelClick" prefHeight="37.0" prefWidth="165.0" text="Cancel selected order">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="btn" layoutX="30.0" layoutY="519.0" mnemonicParsing="false" onAction="#onBackClick" prefHeight="37.0" prefWidth="66.0" text="Back" />
+      <ComboBox fx:id="mOrderSelector" layoutX="249.0" layoutY="63.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#populateOrderDetails" prefHeight="25.0" prefWidth="137.0" promptText="Select order by ID" />
+      <Label layoutX="294.0" layoutY="39.0" text="Order ID" />
+      <VBox fx:id="mOrderDetailBox" layoutX="30.0" layoutY="107.0" prefHeight="317.0" prefWidth="407.0" spacing="5.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="322.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="190.0" text="Order's Branch:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mStoreIDLabel" text="Value" textFill="BLUE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="mOrderDateBox" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="322.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="190.0" text="Order's Date:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mDateLabel" text="Value" textFill="BLUE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="mOrderTimeBox" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="322.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="190.0" text="Order's Time:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mTimeLabel" text="Value" textFill="BLUE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="mDeliveryDateBox" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="322.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="190.0" text="Delivery Date:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mDeliveryDateLabel" text="Value" textFill="BLUE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="mDeliveryTimeBox" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="322.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="190.0" text="Delivery Time:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mDeliveryTimeLabel" text="Value" textFill="BLUE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="mDeliveryBox" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="322.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="190.0" text="Delivery method:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mDeliveryLabel" text="Value" textFill="BLUE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="mAddressBox" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="322.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="190.0" text="Delivery Address: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mAddressLabel" text="Value" textFill="BLUE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="mRNameBox" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="322.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="190.0" text="Receiver's name:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mRNameLabel" text="Value" textFill="BLUE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="322.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="190.0" text="Paid ammount:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mPaidLabel" text="Value" textFill="BLUE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="322.0" spacing="10.0">
+               <children>
+                  <Button id="btn" fx:id="mBlessingButton" mnemonicParsing="false" onAction="#showBlessing" prefHeight="30.0" prefWidth="211.0" text="Click to view attached blessing" textFill="BLUE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="76.0" prefWidth="407.0" spacing="10.0">
+               <children>
+                  <Label fx:id="mDescLabel" prefHeight="27.0" prefWidth="261.0" text="Refund ammount if cancelled:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mRefundLabel" text="Value" textFill="RED">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="mProgressBox" alignment="CENTER" layoutX="376.0" layoutY="104.0" prefHeight="72.0" prefWidth="70.0">
+         <children>
+            <Label text="Loading..">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <ProgressIndicator prefHeight="34.0" prefWidth="55.0" />
+         </children>
+      </VBox>
+      <Label fx:id="mNoOrdersLabel" layoutX="70.0" layoutY="188.0" text="No Orders were found." textFill="RED" visible="false">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

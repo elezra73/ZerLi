@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="330.0" minWidth="600.0" prefHeight="330.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.order.OrderController">
+   <children>
+      <Label layoutX="244.0" layoutY="15.0" prefHeight="27.0" prefWidth="182.0" text="Almost finish">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rbSelfPickup" layoutX="14.0" layoutY="78.0" mnemonicParsing="false" onAction="#rdButtonSelfPickupClicked" prefHeight="18.0" prefWidth="144.0" text="self pickup" />
+      <RadioButton fx:id="rbShipment" layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onAction="#rdButtonShipmentSelected" text="shipment" />
+      <Label layoutX="14.0" layoutY="53.0" prefHeight="18.0" prefWidth="182.0" text="choose delivery preference">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddress" layoutX="12.0" layoutY="187.0" promptText="Enter address" visible="false" />
+      <TextField fx:id="txtName" layoutX="12.0" layoutY="225.0" promptText="Enter reciever name" visible="false" />
+      <TextField fx:id="txtPhone" layoutX="12.0" layoutY="263.0" promptText="Enter phone " visible="false" />
+      <Button id="btn" fx:id="btnSubmit" layoutX="319.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnSubmitClicked" prefHeight="27.0" prefWidth="70.0" text="Done">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="txtBlessing" layoutX="252.0" layoutY="71.0" prefHeight="131.0" prefWidth="323.0" />
+      <Label layoutX="254.0" layoutY="52.0" text="Blessing" />
+      <Label layoutX="393.0" layoutY="239.0" prefHeight="18.0" prefWidth="81.0" text="Final price:">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtFinalPrice" editable="false" layoutX="494.0" layoutY="234.0" prefHeight="27.0" prefWidth="81.0" />
+      <Button id="btn" fx:id="btnBack" layoutX="217.0" layoutY="275.0" mnemonicParsing="false" onAction="#btnBackClicked" prefHeight="27.0" prefWidth="70.0" text="Back">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="cmbTImes" layoutX="156.0" layoutY="138.0" onAction="#getSelectedTime" prefHeight="27.0" prefWidth="89.0" />
+      <DatePicker fx:id="dpDates" layoutX="14.0" layoutY="138.0" onAction="#checkDateAndValidate" prefHeight="27.0" prefWidth="128.0" />
+      <Label fx:id="lblShipmentCost" layoutX="187.0" layoutY="239.0" text="Shipment cost:" visible="false" />
+      <TextField fx:id="txtShipmentCost" layoutX="300.0" layoutY="235.0" prefHeight="27.0" prefWidth="60.0" visible="false" />
+   </children>
+</AnchorPane>

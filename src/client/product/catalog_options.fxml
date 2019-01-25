@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.product.ProductController">
+   <children>
+      <Button id="btn" mnemonicParsing="false" onAction="#btnAddProductOpenWindowClicked" prefHeight="27.0" prefWidth="149.0" text="Add New Product">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button id="btn" mnemonicParsing="false" onAction="#btnUpdateProductOpenWindowClicked" prefHeight="27.0" prefWidth="149.0" text="Update Product Info">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button id="btn" mnemonicParsing="false" onAction="#btnRemoveProductOpenWindowClicked" prefHeight="27.0" prefWidth="149.0" text="Remove Product">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+   </children>
+</VBox>

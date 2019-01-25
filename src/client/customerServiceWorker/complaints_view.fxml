@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="400.0" minWidth="650.0" prefHeight="325.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.customerServiceWorker.ComplaintsViewController">
+   <children>
+      <Pane layoutX="45.0" layoutY="173.0" prefHeight="41.0" prefWidth="477.0" />
+      <Button id="btn" layoutX="394.0" layoutY="326.0" mnemonicParsing="false" onAction="#onRewardAccountClick" prefHeight="41.0" prefWidth="122.0" text="reward account" />
+      <TableView fx:id="mComplaintsList" layoutX="22.0" layoutY="36.0" onMouseReleased="#selectedComplaint" prefHeight="275.0" prefWidth="606.0">
+        <columns>
+          <TableColumn fx:id="mComplaintCol" prefWidth="75.0" text="Complaint" />
+          <TableColumn fx:id="mCustomerCol" text="Customer" />
+            <TableColumn fx:id="mWorkerCol" prefWidth="91.0" text="Worker" />
+            <TableColumn fx:id="mStoreCol" prefWidth="88.0" text="store" />
+            <TableColumn fx:id="mDateCol" minWidth="0.0" prefWidth="126.0" text="time" />
+            <TableColumn fx:id="mDescriptionCol" prefWidth="145.0" text="Description" />
+        </columns>
+      </TableView>
+      <Button id="btn" layoutX="134.0" layoutY="326.0" mnemonicParsing="false" onAction="#BackClick" prefHeight="41.0" prefWidth="122.0" text="Back" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="400.0" maxWidth="300.0" minHeight="254.0" minWidth="300.0" prefHeight="254.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.settings.SettingsController">
+   <children>
+      <Label layoutX="114.0" layoutY="14.0" text="Settings">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="93.0" text="Server IP Adress:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="141.0" text="Server Port:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mHostTextField" layoutX="157.0" layoutY="91.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="mPortTextField" layoutX="157.0" layoutY="139.0" prefHeight="25.0" prefWidth="129.0" />
+      <Button id="btn" layoutX="49.0" layoutY="215.0" mnemonicParsing="false" onAction="#goBackFromSettingsClick" text="Back" />
+      <Button id="btn" layoutX="178.0" layoutY="215.0" mnemonicParsing="false" onAction="#saveSettingsClick" text="Save Settings" />
+      <Label fx:id="mSettingsSavedLabel" layoutX="110.0" layoutY="189.0" text="Settings saved!" textFill="GREEN" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="382.0" minWidth="454.0" prefHeight="382.0" prefWidth="454.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.product.ProductController">
+   <children>
+      <Label layoutX="150.0" layoutY="31.0" prefHeight="23.0" prefWidth="218.0" text="Add New Product Menu">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProductID" editable="false" layoutX="14.0" layoutY="92.0" visible="false" />
+      <TextField fx:id="txtProductName" focusTraversable="false" layoutX="14.0" layoutY="92.0" promptText="Enter Product Name" />
+      <TextField fx:id="txtProductType" focusTraversable="false" layoutX="14.0" layoutY="130.0" promptText="Enter Product Type" />
+      <TextField fx:id="txtProductPrice" focusTraversable="false" layoutX="14.0" layoutY="168.0" promptText="Enter Product Price" />
+      <TextField fx:id="txtProductUrlImage" disable="true" editable="false" focusTraversable="false" layoutX="14.0" layoutY="245.0" promptText="image file name" />
+      <Button id="btn" layoutX="269.0" layoutY="329.0" mnemonicParsing="false" onAction="#btnAddNewProductSubmit" prefHeight="27.0" prefWidth="105.0" text="Submit" />
+      <Button id="btn" layoutX="269.0" layoutY="264.0" mnemonicParsing="false" onAction="#openFileDialog" prefHeight="33.0" prefWidth="105.0" text="Add Picture" />
+      <TextField fx:id="txtProductColor" focusTraversable="false" layoutX="14.0" layoutY="207.0" promptText="Enter Product Color" />
+      <Button id="btn" layoutX="59.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnBackClicked" prefHeight="25.0" prefWidth="60.0" text="Back" />
+      <ImageView fx:id="imgView" fitHeight="150.0" fitWidth="200.0" layoutX="221.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox fx:id="mProgressBox" alignment="CENTER" layoutX="150.0" layoutY="281.0" prefHeight="72.0" prefWidth="70.0">
+         <children>
+            <Label text="Loading..">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <ProgressIndicator prefHeight="34.0" prefWidth="55.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

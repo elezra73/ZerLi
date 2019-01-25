@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="375.0" minWidth="350.0" prefHeight="375.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.user.UserInfoController">
+   <children>
+      <Text layoutX="226.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Details">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ScrollPane layoutX="31.0" layoutY="68.0" prefHeight="242.0" prefViewportHeight="240.0" prefViewportWidth="420.0" prefWidth="558.0">
+         <content>
+            <AnchorPane prefHeight="240.0" prefWidth="556.0">
+               <children>
+                  <VBox fx:id="mLeftVBox" layoutX="-2.0" prefHeight="240.0" prefWidth="280.0" />
+                  <VBox fx:id="mRightVBox" layoutX="281.0" prefHeight="240.0" prefWidth="270.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Button id="btn" layoutX="286.0" layoutY="331.0" mnemonicParsing="false" onAction="#backButtonBlicked" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="501.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zer-Li by G8 © 2017" />
+   </children>
+</AnchorPane>

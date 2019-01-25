@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="617.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.catalog.CatalogMainMenu">
+   <children>
+      <ListView fx:id="listProduct" layoutX="27.0" layoutY="76.0" onKeyReleased="#selectedFromCatalog" onKeyTyped="#selectedFromCatalog" onMouseClicked="#displayProduct" onMousePressed="#selectedFromCatalog" onTouchPressed="#selectedFromCatalog" prefHeight="238.0" prefWidth="254.0" />
+      <ImageView fx:id="viewProduct" fitHeight="190.0" fitWidth="197.0" layoutX="308.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="FirstTitle" layoutX="219.0" layoutY="14.0" prefHeight="53.0" prefWidth="149.0" text="Catalog" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button id="btn" fx:id="addBtn" layoutX="308.0" layoutY="282.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="27.0" prefWidth="109.0" text="Add to cart" />
+      <Button id="btn" fx:id="removeBtn" layoutX="219.0" layoutY="386.0" mnemonicParsing="false" onAction="#removeFromCart" prefHeight="27.0" prefWidth="109.0" text="remove from cart" />
+      <Button id="btn" fx:id="checkOutBtn" layoutX="326.0" layoutY="560.0" mnemonicParsing="false" onAction="#checkOutPress" prefHeight="35.0" prefWidth="87.0" text="Checkout" />
+      <Label layoutX="40.0" layoutY="325.0" prefHeight="27.0" prefWidth="109.0" text="Cart" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="219.0" layoutY="472.0" prefHeight="43.0" prefWidth="149.0" text="Total price:" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="totalTextField" layoutX="386.0" layoutY="488.0" minHeight="27.0" prefHeight="27.0" prefWidth="87.0" />
+      <Button id="btn" layoutX="85.0" layoutY="560.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="35.0" prefWidth="52.0" text="Back" />
+      <Label layoutX="328.0" layoutY="325.0" prefHeight="20.0" prefWidth="52.0" text="Price:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="typeLabel" layoutX="326.0" layoutY="352.0" prefHeight="20.0" prefWidth="178.0" text="Type:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="price" layoutX="399.0" layoutY="325.0" prefHeight="20.0" prefWidth="118.0" textFill="BLUE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <ListView fx:id="listCart" layoutX="40.0" layoutY="378.0" prefHeight="163.0" prefWidth="158.0" />
+      <VBox fx:id="mProgressBox" alignment="CENTER" layoutX="390.0" layoutY="406.0" prefHeight="72.0" prefWidth="70.0">
+         <children>
+            <Label text="Loading..">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <ProgressIndicator prefHeight="34.0" prefWidth="55.0" />
+         </children>
+      </VBox>
+      <Label fx:id="saleLabel" layoutX="448.0" layoutY="74.0" rotate="31.0" text="On Sale!!" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

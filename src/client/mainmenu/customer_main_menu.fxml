@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="503.0" maxWidth="600.0" minHeight="400.0" minWidth="331.0" prefHeight="454.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.mainmenu.CustomerMainMenu">
+   <children>
+      <Text layoutX="72.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Zerl-Li">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="217.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zer-Li by G8 © 2017" />
+      <VBox fx:id="mProgressBox" alignment="CENTER" layoutX="138.0" layoutY="72.0" prefHeight="72.0" prefWidth="70.0">
+         <children>
+            <Label text="Loading..">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <ProgressIndicator prefHeight="34.0" prefWidth="55.0" />
+         </children>
+      </VBox>
+      <Label fx:id="mHelloLabel" layoutX="15.0" layoutY="62.0" text="Hello ">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <VBox fx:id="mButtonsGroup" alignment="TOP_CENTER" layoutX="42.0" layoutY="189.0" prefHeight="137.0" prefWidth="261.0" spacing="15.0">
+         <children>
+            <Button id="btn" mnemonicParsing="false" onAction="#catalogBrowse" text="BROWSE the Catalog">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="btn" mnemonicParsing="false" onAction="#selfOrder" text="CREATE a self-composition order">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="btn" mnemonicParsing="false" onAction="#viewInfoClick" text="VIEW Store Account Info">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Button id="btn" layoutX="15.0" layoutY="380.0" mnemonicParsing="false" onAction="#logOut" text="LOG-OUT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="btn" layoutX="271.0" layoutY="380.0" mnemonicParsing="false" onAction="#exitApplication" text="QUIT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="mStoreSelector" layoutX="59.0" layoutY="144.0" onAction="#onStoreSelected" prefHeight="25.0" prefWidth="227.0" />
+      <Button fx:id="mBrowseCatalogButton" layoutX="42.0" layoutY="199.0" mnemonicParsing="false" onAction="#catalogBrowse" prefHeight="100.0" prefWidth="261.0" text="BROWSE THE CATALOG" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button id="btn" layoutX="125.0" layoutY="326.0" mnemonicParsing="false" onAction="#cancelOrder" text="VIEW orders">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

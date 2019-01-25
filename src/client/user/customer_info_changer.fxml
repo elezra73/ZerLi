@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="304.0" minWidth="388.0" prefHeight="563.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.user.CustomerChangerController">
+   <children>
+      <Text fx:id="mTitleLabel" layoutX="57.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer info changer">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="267.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zer-Li by G8 © 2017" />
+      <VBox fx:id="mProgressBox" alignment="CENTER" layoutX="127.0" layoutY="461.0" prefHeight="72.0" prefWidth="70.0">
+         <children>
+            <Label text="Loading..">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <ProgressIndicator prefHeight="34.0" prefWidth="55.0" />
+         </children>
+      </VBox>
+      <Button id="btn" layoutX="32.0" layoutY="476.0" mnemonicParsing="false" onAction="#backButtonBlicked" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="btn" fx:id="mSubmitButton" disable="true" layoutX="253.0" layoutY="476.0" mnemonicParsing="false" onAction="#submit" text="Submit changes">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="69.0" prefHeight="50.0" prefWidth="266.0" spacing="20.0">
+         <children>
+            <Label fx:id="mNameLabel1" text="Customer ID: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="mUserIDLabel" prefHeight="25.0" prefWidth="133.0" text="id" textFill="#059400">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+      <VBox fx:id="mUserVBox" layoutX="14.0" layoutY="119.0" prefHeight="330.0" prefWidth="361.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="351.0" spacing="20.0">
+               <children>
+                  <Label text="Customer's name:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mNameTextField" prefHeight="25.0" prefWidth="192.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="351.0" spacing="20.0">
+               <children>
+                  <Label text="Customer storeID:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="mStoreSelector" disable="true" onAction="#selectStore" prefHeight="25.0" prefWidth="195.0" promptText="Select Store" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="351.0" spacing="20.0">
+               <children>
+                  <Label text="Address: ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mAddressTextField" prefHeight="25.0" prefWidth="257.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="351.0" spacing="20.0">
+               <children>
+                  <Label text="Social ID Number:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mSocialNumberTextField" prefHeight="25.0" prefWidth="193.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="351.0" spacing="20.0">
+               <children>
+                  <Label text="Account Balance:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mAccountBalanceLabel" text="\$$">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="351.0" spacing="20.0">
+               <children>
+                  <Label text="Payment Method:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="mPaymentMethodComboBox" prefHeight="25.0" prefWidth="190.0" promptText="Select payment method" />
+               </children>
+            </HBox>
+            <HBox fx:id="mCreditCardBox" alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="351.0" spacing="20.0">
+               <children>
+                  <Label text="Credit Card:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mCreditCardTextField" prefHeight="25.0" prefWidth="240.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <Button id="btn" fx:id="mUnfreezeButton" layoutX="295.0" layoutY="94.0" mnemonicParsing="false" onAction="#unfreezeAccount" text="UNFREEZE" textFill="LIME" />
+      <Button id="btn" fx:id="mFreezeButton" layoutX="303.0" layoutY="57.0" mnemonicParsing="false" onAction="#freezeAccount" text="FREEZE" textFill="RED" />
+   </children>
+</AnchorPane>
